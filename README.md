@@ -20,14 +20,23 @@ Jika Anda meng-clone atau fork repositori ini, pastikan untuk membaca instruksi 
     ```bash
     pip install -r requirements.txt
     ```
-3. Untuk menjalankan dependencies :
+
+3. Jangan Lupa Untuk Mengganti :
+    ```bash
+    nano .env
+    ```
+Isi Alamat Address Dan Private Key Seperti Ini 
+SENDER_ADDRESS=PASTE_ALAMAT_ADDRESS_KAMU_DISINI
+PRIVATE_KEY=PASTE_PRIVATE_KEY_KAMU DISINI
+    
+6. Untuk menjalankan dependencies :
     ```bash
     python3 unichain_sepolia.py
     ```    
 
    Script ini akan menginstall dependencies yang diperlukan jika ada.
 
-4. Jalankan proyek dengan mengikuti instruksi yang ada di setiap file atau dokumentasi yang tersedia.
+7. Jalankan proyek dengan mengikuti instruksi yang ada di setiap file atau dokumentasi yang tersedia.
 
 ## Kontribusi
 
