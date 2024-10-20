@@ -46,7 +46,7 @@ venv.bak/
 # Pyenv
 .python-version
 
-# Editor files (created by John Doe)
+# Editor files (created by Bactiar291)
 .vscode/
 .idea/
 *.swp
