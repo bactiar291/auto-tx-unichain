@@ -5,17 +5,19 @@ from dotenv import load_dotenv
 from datetime import datetime
 from colorama import Fore, Style, init
 
+# Inisialisasi colorama
 init(autoreset=True)
 
+# Karakter khusus
 CHECK_MARK = Fore.GREEN + "✔️" + Style.RESET_ALL
 CROSS_MARK = Fore.RED + "❌" + Style.RESET_ALL
 
-print(Fore.YELLOW + "========================================")
-print(Fore.CYAN + "  dibuat oleh: Anam Bactiar")
-print(Fore.MAGENTA + "  Terima kasih To ANAM BACTIAR!")
-print(Fore.BLUE + "  GitHub: https://github.com/bactiar291")
-print(Fore.GREEN + "Buy coffee to me : 0x648dce97a403468dfc02c793c2b441193fccf77b ")
-print(Fore.YELLOW + "========================================\n")
+print(Fore.YELLOW +                        "========================================")
+print(Fore.CYAN +                                 "AUTHOR : ANAM BACTIAR")
+print(Fore.MAGENTA +                           "TERIMAKASIH TO ANAM BACTIAR!")
+print(Fore.BLUE +                         "GITHUB: https://github.com/bactiar291")
+print(Fore.GREEN +             "BUY COFFE FOR ME : 0x648dce97a403468dfc02c793c2b441193fccf77b ")
+print(Fore.YELLOW +                      "========================================\n")
 
 load_dotenv()
 
@@ -34,6 +36,9 @@ if not sender_address or not private_key:
     raise Exception("Harap isi SENDER_ADDRESS dan PRIVATE_KEY di file .env")
 
 receivers = [
+'0xb6D8c5f48B5B2467dfd8046C712A591EBCA1Cbdc',
+'0x83eECe161a79b2c158318D4Ec162502A922adC85',
+'0xbD8c6c92e3e78bB4fE1148a0Cba08ad91BABc524',
 '0xbD8c6c92e3e78bB4fE1148a0Cba08ad91BABc524',
 '0xc2dD6Ea96369213e6dB99E5cB95579000959B9Fd',
 '0x552D59a2c8E691E959FFE56166a338E04D572dEb',
@@ -158,7 +163,7 @@ receivers = [
 '0xE5fCbfA2B711acCa57dE3F764e86323C128397E3',
 '0xAb9c6b2C92Ad1A0a8b7BE6c384042Be5001d8402',
 '0xB45bF3935bEB3FCe15C7198430ae73bF74f235D3',
-'0x72D07c49DDAF102c38Dbcc992faf156b5a973254',
+'0x72D07c49DDAF102c38Dbcc992faf156b5a973254',    
 ]
 
 amount = web3.to_wei(0.000000012, 'ether')  # Contoh: 0.000000012 ETH
@@ -180,7 +185,7 @@ def send_transaction(receiver_address, amount, gas_price):
     
     tx_hash = web3.eth.send_raw_transaction(signed_tx.raw_transaction)
     
-    print(f"{datetime.now()} - Transaksi berhasil dikirim ke {receiver_address}. Tx Hash: {web3.to_hex(tx_hash)} {CHECK_MARK}")
+    print(Fore.CYAN + f"{datetime.now()} - Transaksi berhasil dikirim ke {receiver_address}. Tx Hash: {web3.to_hex(tx_hash)} " + CHECK_MARK)
 
 while True:
     for receiver in receivers:
