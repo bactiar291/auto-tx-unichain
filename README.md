@@ -48,7 +48,7 @@ Kontribusi sangat dihargai! Jika Anda memiliki ide, saran, atau menemukan bug, j
 
 ## Lisensi
 
-Proyek ini menggunakan lisensi [sebutkan lisensi]. Silakan baca file LICENSE untuk informasi lebih lanjut.
+Proyek ini menggunakan lisensi [MIT]. Silakan baca file LICENSE untuk informasi lebih lanjut.
 
 ---
 
