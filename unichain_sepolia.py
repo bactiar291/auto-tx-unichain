@@ -34,8 +34,6 @@ if not sender_address or not private_key:
     raise Exception("Harap isi SENDER_ADDRESS dan PRIVATE_KEY di file .env")
 
 receivers = [
-'0xb6D8c5f48B5B2467dfd8046C712A591EBCA1Cbdc',
-'0x83eECe161a79b2c158318D4Ec162502A922adC85',
 '0xbD8c6c92e3e78bB4fE1148a0Cba08ad91BABc524',
 '0xc2dD6Ea96369213e6dB99E5cB95579000959B9Fd',
 '0x552D59a2c8E691E959FFE56166a338E04D572dEb',
