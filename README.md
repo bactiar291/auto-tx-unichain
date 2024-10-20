@@ -20,12 +20,13 @@ Jika Anda meng-clone atau fork repositori ini, pastikan untuk membaca instruksi 
      ```bash
     cd auto-tx-unichain
     ```
-2. Untuk meng-install dependencies secara manual (jika diperlukan):
+2. Untuk meng-install dependencies secara manual (jika diperlukan)
+   Script ini akan menginstall dependencies yang diperlukan jika ada :
     ```bash
     pip install -r requirements.txt
     ```
 
-3. Jangan Lupa Untuk Mengganti :
+4. Jangan Lupa Untuk Mengganti :
     ```bash
     nano .env
     ```
@@ -38,7 +39,6 @@ PRIVATE_KEY=PASTE_PRIVATE_KEY_KAMU DISINI
     python3 unichain_sepolia.py
     ```    
 
-   Script ini akan menginstall dependencies yang diperlukan jika ada.
 
 7. Jalankan proyek dengan mengikuti instruksi yang ada di setiap file atau dokumentasi yang tersedia.
 
