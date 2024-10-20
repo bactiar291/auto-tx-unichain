@@ -3,22 +3,28 @@ import time
 import os
 from dotenv import load_dotenv
 from datetime import datetime
+from colorama import Fore, Style, init
 
-print("========================================")
-print("  dibuat oleh: Anam Bactiar")
-print("  Terima kasih To ANAM BACTIAR!")
-print("  GitHub: https://github.com/bactiar291")
-print("Buy coffe To me : 0x648dce97a403468dfc02c793c2b441193fccf77b ")
-print("========================================\n")
+init(autoreset=True)
 
-                                  
+CHECK_MARK = Fore.GREEN + "✔️" + Style.RESET_ALL
+CROSS_MARK = Fore.RED + "❌" + Style.RESET_ALL
+
+print(Fore.YELLOW + "========================================")
+print(Fore.CYAN + "  dibuat oleh: Anam Bactiar")
+print(Fore.MAGENTA + "  Terima kasih To ANAM BACTIAR!")
+print(Fore.BLUE + "  GitHub: https://github.com/bactiar291")
+print(Fore.GREEN + "Buy coffee to me : 0x648dce97a403468dfc02c793c2b441193fccf77b ")
+print(Fore.YELLOW + "========================================\n")
+
 load_dotenv()
 
 web3 = Web3(Web3.HTTPProvider('https://autumn-cosmological-scion.unichain-sepolia.quiknode.pro/c568806873f2a9edb9fcdea8aef0569ff729eb25'))
 
 if web3.is_connected():
-    print("Terkoneksi dengan jaringan Ethereum")
+    print(Fore.GREEN + "Terkoneksi dengan jaringan Ethereum " + CHECK_MARK)
 else:
+    print(Fore.RED + "Gagal terhubung ke jaringan Ethereum " + CROSS_MARK)
     raise Exception("Gagal terhubung ke jaringan Ethereum")
 
 sender_address = os.getenv('SENDER_ADDRESS')
@@ -158,7 +164,6 @@ receivers = [
 ]
 
 amount = web3.to_wei(0.000000012, 'ether')  # Contoh: 0.000000012 ETH
-
 gas_price = web3.eth.gas_price
 
 def send_transaction(receiver_address, amount, gas_price):
@@ -168,22 +173,21 @@ def send_transaction(receiver_address, amount, gas_price):
         'nonce': nonce,
         'to': receiver_address,
         'value': amount,
-        'gas': 21000,  
+        'gas': 21000,
         'gasPrice': gas_price,
-        'chainId': 1301  
+        'chainId': 1301
     }
 
     signed_tx = web3.eth.account.sign_transaction(tx, private_key)
     
     tx_hash = web3.eth.send_raw_transaction(signed_tx.raw_transaction)
     
-    print(f"{datetime.now()} - Transaksi berhasil dikirim ke {receiver_address}. Tx Hash: {web3.to_hex(tx_hash)}")
-
+    print(f"{datetime.now()} - Transaksi berhasil dikirim ke {receiver_address}. Tx Hash: {web3.to_hex(tx_hash)} {CHECK_MARK}")
 
 while True:
     for receiver in receivers:
         send_transaction(receiver, amount, gas_price)
         time.sleep(5)  # Penundaan 5 detik di antara transaksi untuk menghindari nonce error
     
-    print("Menunggu 1 menit sebelum pengiriman berikutnya...")
-    time.sleep(60) 
+    print(Fore.YELLOW + "Menunggu 1 menit sebelum pengiriman berikutnya...")
+    time.sleep(60)
