@@ -1,4 +1,4 @@
-# auto-tx-evm
+# auto-tx-unichain_sepolia
 hi saya membuat ini dengan segala yang saya bisa maka dari itu jangan di rename yah
 langkah untuk memulainya :
 pip install web3
