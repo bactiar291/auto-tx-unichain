@@ -4,15 +4,12 @@ import os
 from dotenv import load_dotenv
 from datetime import datetime
 
-
-                                  print("========================================")
-                                  print("  dibuat oleh: Anam Bactiar")
-                                  print("  Terima kasih To ANAM BACTIAR!")
-                                  print("  GitHub: https://github.com/bactiar291")
-                                  print("Buy coffe To me : 0x648dce97a403468dfc02c793c2b441193fccf77b ")
-                                  print("========================================\n")
-
-
+print("========================================")
+print("  dibuat oleh: Anam Bactiar")
+print("  Terima kasih To ANAM BACTIAR!")
+print("  GitHub: https://github.com/bactiar291")
+print("Buy coffe To me : 0x648dce97a403468dfc02c793c2b441193fccf77b ")
+print("========================================\n")
 
                                   
 load_dotenv()
