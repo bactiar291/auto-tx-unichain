@@ -15,7 +15,11 @@ Jika Anda meng-clone atau fork repositori ini, pastikan untuk membaca instruksi 
     ```bash
     git clone https://github.com/bactiar291/auto-tx-unichain.git
     ```
-    
+
+2. salin perintah dibawah untuk masuk folder :
+     ```bash
+    cd auto-tx-unichain
+    ```
 2. Untuk meng-install dependencies secara manual (jika diperlukan):
     ```bash
     pip install -r requirements.txt
