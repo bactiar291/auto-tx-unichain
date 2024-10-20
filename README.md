@@ -16,17 +16,16 @@ Jika Anda meng-clone atau fork repositori ini, pastikan untuk membaca instruksi 
     git clone https://github.com/bactiar291/auto-tx-unichain.git
     ```
     
-2. Setelah clone, pastikan untuk menjalankan script selamat datang:
-    ```bash
-    python3 unichain_sepolia.py
-    ```
-
-   Script ini akan menginstall dependencies yang diperlukan jika ada.
-
-3. Untuk meng-install dependencies secara manual (jika diperlukan):
+2. Untuk meng-install dependencies secara manual (jika diperlukan):
     ```bash
     pip install -r requirements.txt
     ```
+3. Untuk menjalankan dependencies :
+    ```bash
+    python3 unichain_sepolia.py
+    ```    
+
+   Script ini akan menginstall dependencies yang diperlukan jika ada.
 
 4. Jalankan proyek dengan mengikuti instruksi yang ada di setiap file atau dokumentasi yang tersedia.
 
