@@ -188,7 +188,7 @@ def send_transaction(receiver_address, amount, gas_price):
 while True:
     for receiver in receivers:
         send_transaction(receiver, amount, gas_price)
-        time.sleep(5) 
+        time.sleep(10) 
     
     print(Fore.YELLOW + "Menunggu 1 menit sebelum pengiriman berikutnya...")
     time.sleep(60)
