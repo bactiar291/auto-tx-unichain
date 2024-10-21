@@ -1,4 +1,5 @@
 # auto-tx-unichain_sepolia
+# utamakan "git pull" sebelum menjalankan
 # khusus pengguna termux bisa scroll sampe bawah jika terjadi gagal saat instalasi dan run 
 Selamat datang di repositori **Bactiar291**! 🎉
 
