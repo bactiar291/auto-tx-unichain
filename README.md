@@ -8,6 +8,11 @@ Proyek ini dibuat oleh **Bactiar291** untuk tujuan [memudahkan pengguna]. Proyek
 
 Jika Anda meng-clone atau fork repositori ini, pastikan untuk membaca instruksi di bawah ini untuk memulai.
 
+## Tracking Trx Di explorer Cek 👇 :
+
+    https://sepolia.uniscan.xyz/
+
+
 ## Cara Menggunakan
 
 1. Clone repositori ini ke mesin lokal Anda:
