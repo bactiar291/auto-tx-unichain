@@ -1,6 +1,5 @@
 # auto-tx-unichain_sepolia
-# Proyek Bactiar291
-
+# khusus pengguna termux bisa scroll sampe bawah jika terjadi gagal saat instalasi dan run 
 Selamat datang di repositori **Bactiar291**! 🎉
 
 ## Tentang Proyek Ini
