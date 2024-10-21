@@ -164,7 +164,7 @@ receivers = [
 '0x72D07c49DDAF102c38Dbcc992faf156b5a973254',    
 ]
 
-amount = web3.to_wei(0.000000012, 'ether')  # Contoh: 0.000000012 ETH
+amount = web3.to_wei(0.000000012, 'ether')  
 gas_price = web3.eth.gas_price
 
 def send_transaction(receiver_address, amount, gas_price):
@@ -188,7 +188,7 @@ def send_transaction(receiver_address, amount, gas_price):
 while True:
     for receiver in receivers:
         send_transaction(receiver, amount, gas_price)
-        time.sleep(5)  # Penundaan 5 detik di antara transaksi untuk menghindari nonce error
+        time.sleep(5) 
     
     print(Fore.YELLOW + "Menunggu 1 menit sebelum pengiriman berikutnya...")
     time.sleep(60)
