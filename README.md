@@ -2,9 +2,9 @@
 # utamakan "git pull" sebelum menjalankan
 # khusus pengguna termux bisa scroll sampe bawah jika terjadi gagal saat instalasi dan run 
 Selamat datang di repositori **Bactiar291**! 🎉
-**via termux**
+**via windows**
 
-![Termux Screenshot](https://raw.githubusercontent.com/bactiar291/auto-tx-unichain/main/ss.png)
+![Screenshot](https://raw.githubusercontent.com/bactiar291/auto-tx-unichain/main/ss.png)
 
 
 ## Tentang Proyek Ini
