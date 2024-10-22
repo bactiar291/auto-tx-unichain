@@ -2,6 +2,8 @@
 # utamakan "git pull" sebelum menjalankan
 # khusus pengguna termux bisa scroll sampe bawah jika terjadi gagal saat instalasi dan run 
 Selamat datang di repositori **Bactiar291**! 🎉
+![Termux Screenshot](https://github.com/username/repo/blob/main/path_to_image/Screenshot_2024-10-23-01-01-36-055_com.termux.jpg)
+
 
 ## Tentang Proyek Ini
 
