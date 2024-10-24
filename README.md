@@ -1,3 +1,4 @@
+# SABAR BG LG DI PERBAIKI ADA YG ERROR 
 # auto-tx-unichain_sepolia
 # utamakan "git pull" sebelum menjalankan
 # khusus pengguna termux bisa scroll sampe bawah jika terjadi gagal saat instalasi dan run 
