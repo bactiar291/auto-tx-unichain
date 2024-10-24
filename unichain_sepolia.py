@@ -87,7 +87,7 @@ def send_transaction(receiver_address, amount, gas_price):
     signed_tx = web3.eth.account.sign_transaction(tx, private_key)
 
     try:
-        tx_hash = web3.eth.send_raw_transaction(signed_tx.rawTransaction)
+        tx_hash = web3.eth.send_raw_transaction(signed_tx.raw_transaction)
         print(Fore.CYAN + f"{datetime.now()} - Transaksi berhasil ke {receiver_address}. {CHECK_MARK}")
         
         sender_balance_after = get_balance(sender_address)
