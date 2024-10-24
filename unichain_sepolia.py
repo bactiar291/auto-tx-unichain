@@ -54,7 +54,7 @@ if not sender_address or not private_key:
     raise Exception(f"{CROSS_MARK} Harap isi SENDER_ADDRESS dan PRIVATE_KEY di file .env")
 
 def generate_random_address():
-    return Web3.toChecksumAddress('0x' + ''.join(random.choices('0123456789abcdef', k=40)))
+    return Web3.to_checksum_address('0x' + ''.join(random.choices('0123456789abcdef', k=40)))
 
 def get_balance(address):
     balance = web3.eth.get_balance(address)
