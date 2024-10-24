@@ -6,10 +6,10 @@ from dotenv import load_dotenv
 from datetime import datetime
 from colorama import Fore, Style, init
 
-# Inisialisasi colorama
+
 init(autoreset=True)
 
-# Karakter khusus
+
 CHECK_MARK = Fore.GREEN + "✔️" + Style.RESET_ALL
 CROSS_MARK = Fore.RED + "❌" + Style.RESET_ALL
 SPECIAL_CHAR = Fore.YELLOW + "★" + Style.RESET_ALL
@@ -28,10 +28,10 @@ print(Fore.BLUE + "GITHUB: https://github.com/bactiar291")
 print(Fore.GREEN + "BUY COFFEE FOR ME : 0x648dce97a403468dfc02c793c2b441193fccf77b ")
 print(Fore.YELLOW + "========================================\n")
 
-# Muat variabel dari file .env
+
 load_dotenv()
 
-# Koneksi ke node Ethereum
+
 web3 = Web3(Web3.HTTPProvider('https://autumn-cosmological-scion.unichain-sepolia.quiknode.pro/c568806873f2a9edb9fcdea8aef0569ff729eb25'))
 
 if web3.is_connected():
@@ -40,14 +40,14 @@ else:
     print(Fore.RED + f"Gagal terhubung ke jaringan Ethereum {CROSS_MARK}")
     raise Exception("Gagal terhubung ke jaringan Ethereum")
 
-# Alamat dan kunci pribadi dari pengirim
+
 sender_address = os.getenv('SENDER_ADDRESS')
 private_key = os.getenv('PRIVATE_KEY')
 
 if not sender_address or not private_key:
     raise Exception(f"{CROSS_MARK} Harap isi SENDER_ADDRESS dan PRIVATE_KEY di file .env")
 
-# Daftar penerima
+
 receivers = [
 '0xb6D8c5f48B5B2467dfd8046C712A591EBCA1Cbdc',
 '0x83eECe161a79b2c158318D4Ec162502A922adC85',
@@ -193,7 +193,7 @@ def get_gas_price():
 
 
 def send_transaction(receiver_address, amount, gas_price):
-    # Dapatkan nonce terbaru
+   
     nonce = get_nonce()
 
     
@@ -234,7 +234,7 @@ def send_transaction(receiver_address, amount, gas_price):
 
 while True:
     for receiver in receivers:
-        # Acak jumlah transfer dari min hingga max (misal 0.000000001 ETH hingga 0.00000002 ETH)
+       
         random_amount = web3.to_wei(random.uniform(0.000000001, 0.00000002), 'ether')
 
        
