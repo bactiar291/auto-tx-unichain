@@ -8,7 +8,6 @@ from colorama import Fore, Style, init
 
 init(autoreset=True)
 
-# Simpan simbol-simbol warna yang digunakan
 CHECK_MARK = Fore.GREEN + "✔️" + Style.RESET_ALL
 CROSS_MARK = Fore.RED + "❌" + Style.RESET_ALL
 BALANCE_SYMBOL = Fore.CYAN + "💰" + Style.RESET_ALL
@@ -17,24 +16,13 @@ SENDER_ADDRESS_SYMBOL = Fore.CYAN + "📤 Alamat Pengirim:" + Style.RESET_ALL
 RECEIVER_ADDRESS_SYMBOL = Fore.MAGENTA + "📥 Alamat Penerima:" + Style.RESET_ALL
 AMOUNT_SYMBOL = Fore.LIGHTYELLOW_EX + "💵 Jumlah Kiriman:" + Style.RESET_ALL
 
-# Daftar warna untuk efek glitch
-colors = [Fore.RED, Fore.GREEN, Fore.BLUE, Fore.CYAN, Fore.MAGENTA, Fore.YELLOW]
-
-def print_glitch_effect(text):
-    """ Print text with colorful glitch effect """
-    glitch_chars = ['@', '#', '$', '%', '^', '&', '*', '(', ')', '!', '?']
-    glitch_text = ''.join(
-        random.choice(glitch_chars) if random.random() < 0.1 else random.choice(colors) + char for char in text
-    )
-    print(glitch_text)
-
 def print_header():
     os.system('cls' if os.name == 'nt' else 'clear')
     print(Fore.YELLOW + "=" * 50)
-    print_glitch_effect(Fore.CYAN + " " * 10 + "AUTHOR : ANAM BACTIAR")
-    print_glitch_effect(Fore.MAGENTA + " " * 10 + "THANKS TO : ANAM BACTIAR!")
-    print_glitch_effect(Fore.BLUE + " " * 10 + "GITHUB: https://github.com/bactiar291")
-    print_glitch_effect(Fore.GREEN + " " * 10 + "BUY COFFEE FOR ME : 0x648dce97a403468dfc02c793c2b441193fccf77b ")
+    print(Fore.CYAN + " " * 10 + "AUTHOR : ANAM BACTIAR")
+    print(Fore.MAGENTA + " " * 10 + "THANKS TO : ANAM BACTIAR!")
+    print(Fore.BLUE + " " * 10 + "GITHUB: https://github.com/bactiar291")
+    print(Fore.GREEN + " " * 10 + "BUY COFFEE FOR ME: 0x648dce97a403468dfc02c793c2b441193fccf77b ")
     print(Fore.YELLOW + "=" * 50 + "\n")
 
 load_dotenv()
@@ -68,7 +56,6 @@ def get_gas_price():
 
 def send_transaction(receiver_address, amount, gas_price):
     nonce = get_nonce()
-
     sender_balance_before = get_balance(sender_address)
     print(Fore.BLUE + f"{BALANCE_SYMBOL} Saldo Pengirim Sebelum Tx: {sender_balance_before:.18f} {ETH_SYMBOL}")
     print(Fore.CYAN + f"{SENDER_ADDRESS_SYMBOL} {sender_address}")
@@ -98,10 +85,17 @@ def send_transaction(receiver_address, amount, gas_price):
     except Exception as e:
         print(Fore.RED + f"Gagal mengirim transaksi: {str(e)} {CROSS_MARK}")
 
+def countdown(seconds):
+    while seconds:
+        print(Fore.MAGENTA + f"Menunggu {seconds} detik untuk mencoba kembali...", end='\r')
+        time.sleep(1)
+        seconds -= 1
+    print(Fore.GREEN + "Memulai kembali proses...\n")
+
 while True:
     print_header()
     receiver = generate_random_address()
     random_amount = random.uniform(0.000000001, 0.00000002)
     gas_price = get_gas_price()
     send_transaction(receiver, random_amount, gas_price)
-    time.sleep(3)
+    countdown(3)
